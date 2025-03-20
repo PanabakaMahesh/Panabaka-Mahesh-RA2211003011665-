@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <p className="text-xs">
             # 203 2nd Main Road, Sadduguntepalya, Hyderabad 500034, Telangana, INDIA. Phone: 91-40-27770568/27755183,
             <br />
-            Web: <a href="https://www.affordmed.com" className="affordmed-link">www.affordmed.com</a>, E-mail: <a href="mailto:contact@affordmed.com" className="affordmed-link">contact@affordmed.com</a>, CIN: U72200TG2018PTCOTP118807, UDYAM-TS-23-0019232
+            Web: <a href="https://www.affordmed.com" className="text-blue-600 hover:underline">www.affordmed.com</a>, E-mail: <a href="mailto:contact@affordmed.com" className="text-blue-600 hover:underline">contact@affordmed.com</a>, CIN: U72200TG2018PTCOTP118807, UDYAM-TS-23-0019232
           </p>
         </div>
       </div>

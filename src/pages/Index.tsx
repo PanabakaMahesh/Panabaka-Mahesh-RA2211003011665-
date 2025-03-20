@@ -20,11 +20,11 @@ const Index = () => {
       
       <main className="flex-grow px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
+          <AverageCalculator />
+          <Separator className="my-8" />
           <AuthorizationTokenAPI />
           <Separator className="my-8" />
           <RegistrationAPI />
-          <Separator className="my-8" />
-          <AverageCalculator />
         </div>
       </main>
       
