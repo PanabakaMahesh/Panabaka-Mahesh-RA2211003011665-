@@ -3,7 +3,10 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AverageCalculator from '@/components/AverageCalculator';
+import AuthorizationTokenAPI from '@/components/AuthorizationTokenAPI';
+import RegistrationAPI from '@/components/RegistrationAPI';
 import { motion } from 'framer-motion';
+import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   return (
@@ -17,6 +20,10 @@ const Index = () => {
       
       <main className="flex-grow px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
+          <AuthorizationTokenAPI />
+          <Separator className="my-8" />
+          <RegistrationAPI />
+          <Separator className="my-8" />
           <AverageCalculator />
         </div>
       </main>
