@@ -83,20 +83,7 @@ const AverageCalculator: React.FC = () => {
         <h2 className="text-2xl font-bold mb-6">Average Calculator HTTP Microservice</h2>
         
         <div className="mb-6">
-          <p className="text-gray-700 mb-4">
-            Create an Average Calculator microservice that exposes a REST API "numbers/[numberid]" that
-            exclusively accepts qualified number IDs.
-          </p>
           
-          <ul className="list-disc pl-5 mb-4 space-y-1 text-gray-700">
-            <li>Qualified IDs include 'p' for prime, 'f' for Fibonacci, 'e' for even, and 'r' for random numbers.</li>
-            <li>Configure a window size, e.g., 10.</li>
-            <li>Upon each request, fetch numbers from a third-party server and store them. Avoid implementing APIs for generating even, prime, etc., numbers; solely rely on the provided third-party API.</li>
-            <li>Ensure stored numbers are unique, disregarding duplicates. Ignore responses taking longer than 500 ms or encountering errors.</li>
-            <li>If stored numbers are fewer than the window size, calculate their average. Limit stored numbers to the window size. Upon breaching the window size, replace the oldest number with the newest one.</li>
-            <li>Respond to each request with the numbers stored before and after the latest API call, along with the average of numbers matching the window size.</li>
-            <li>Maintain quick responses, never exceeding 500 milliseconds.</li>
-          </ul>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
