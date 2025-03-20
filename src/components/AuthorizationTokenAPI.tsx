@@ -1,7 +1,6 @@
 
 import React from 'react';
 import TestCase from './TestCase';
-import { motion } from 'framer-motion';
 
 const AuthorizationTokenAPI: React.FC = () => {
   const requestData = {
@@ -20,16 +19,11 @@ const AuthorizationTokenAPI: React.FC = () => {
   };
 
   return (
-    <motion.div 
-      className="glass-morphism rounded-lg p-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
+    <div className="bg-white rounded-lg p-6 shadow-sm">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-3">Authorisation Token API</h2>
+        <h2 className="text-2xl font-bold mb-3">Authorization Token API</h2>
         <p className="text-gray-700 mb-4">
-          This is an API to obtain the Authorisation Token for your company
+          This is an API to obtain the Authorization Token for your company
         </p>
       </div>
 
@@ -43,7 +37,7 @@ const AuthorizationTokenAPI: React.FC = () => {
         title="Response: (Status Code: 200)"
         responseData={responseData}
       />
-    </motion.div>
+    </div>
   );
 };
 

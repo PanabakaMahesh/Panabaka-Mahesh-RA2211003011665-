@@ -1,7 +1,6 @@
 
 import React from 'react';
 import TestCase from './TestCase';
-import { motion } from 'framer-motion';
 
 const RegistrationAPI: React.FC = () => {
   const requestData = {
@@ -17,18 +16,13 @@ const RegistrationAPI: React.FC = () => {
   };
 
   return (
-    <motion.div 
-      className="glass-morphism rounded-lg p-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
+    <div className="bg-white rounded-lg p-6 shadow-sm">
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-3">Registration</h2>
         <ul className="list-disc pl-5 mb-4 space-y-2 text-gray-700">
           <li>Before you start the test, you need to register with our Test Server.</li>
-          <li>Your registration details, including Roll Number and Email, must align with your university/college email and roll number. (Email must support Google Form verified submission)</li>
-          <li>The Access Code that you need to use to authenticate yourself before accessing the test server APIs has been shared on the email that you would have received. (Don't use the Access Code present in the example below. As the name suggests, it's only an example and won't work)</li>
+          <li>Your registration details, including Roll Number and Email, must align with your university/college email and roll number.</li>
+          <li>The Access Code that you need to use to authenticate yourself before accessing the test server APIs has been shared on the email that you would have received.</li>
         </ul>
       </div>
 
@@ -54,7 +48,7 @@ const RegistrationAPI: React.FC = () => {
           responseData={responseData}
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

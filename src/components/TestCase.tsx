@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface TestCaseProps {
   title?: string;
@@ -19,12 +18,7 @@ const TestCase: React.FC<TestCaseProps> = ({ title, requestUrl, responseData }) 
   };
 
   return (
-    <motion.div 
-      className="mb-8"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="mb-8">
       {title && <h3 className="text-xl font-bold mb-3">{title}</h3>}
       
       {requestUrl && (
@@ -34,7 +28,7 @@ const TestCase: React.FC<TestCaseProps> = ({ title, requestUrl, responseData }) 
             href={requestUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-affordmed-blue hover:underline"
+            className="text-blue-600 hover:underline"
           >
             {requestUrl}
           </a>
@@ -44,7 +38,7 @@ const TestCase: React.FC<TestCaseProps> = ({ title, requestUrl, responseData }) 
       {responseData && (
         <div>
           {!requestUrl && !title && (
-            <div className="json-response bg-gray-100 p-4 rounded">
+            <div className="bg-gray-100 p-4 rounded-md font-mono text-sm overflow-x-auto border border-gray-200 text-left">
               {`{`}
               <div className="pl-4">
                 {Object.entries(responseData).map(([key, value], idx) => (
@@ -60,7 +54,7 @@ const TestCase: React.FC<TestCaseProps> = ({ title, requestUrl, responseData }) 
           {(requestUrl || title) && (
             <div>
               <h4 className="text-sm font-medium text-gray-700 mb-2">Response</h4>
-              <div className="json-response bg-gray-100 p-4 rounded">
+              <div className="bg-gray-100 p-4 rounded-md font-mono text-sm overflow-x-auto border border-gray-200 text-left">
                 {`{`}
                 <div className="pl-4">
                   {Object.entries(responseData).map(([key, value], idx) => (
@@ -80,7 +74,7 @@ const TestCase: React.FC<TestCaseProps> = ({ title, requestUrl, responseData }) 
           )}
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 

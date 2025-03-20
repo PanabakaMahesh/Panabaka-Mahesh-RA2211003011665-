@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface NumberDisplayProps {
   title: string;
@@ -21,13 +20,8 @@ const NumberDisplay: React.FC<NumberDisplayProps> = ({ title, data, isLoading = 
   };
 
   return (
-    <motion.div
-      className="mb-6 bg-white rounded-lg shadow-subtle p-6 border border-gray-100"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
-      <h3 className="text-lg font-semibold mb-3 text-affordmed-blue">{title}</h3>
+    <div className="mb-6 bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+      <h3 className="text-lg font-semibold mb-3 text-gray-800">{title}</h3>
       
       {isLoading ? (
         <div className="animate-pulse flex flex-col space-y-2">
@@ -36,7 +30,7 @@ const NumberDisplay: React.FC<NumberDisplayProps> = ({ title, data, isLoading = 
           <div className="h-4 bg-gray-200 rounded w-5/6"></div>
         </div>
       ) : (
-        <div className="json-response">
+        <div className="bg-gray-100 p-4 rounded-md font-mono text-sm overflow-x-auto border border-gray-200 text-left">
           {`{`}
           <div className="pl-4">
             {windowPrevState && (
@@ -63,7 +57,7 @@ const NumberDisplay: React.FC<NumberDisplayProps> = ({ title, data, isLoading = 
           {`}`}
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 
